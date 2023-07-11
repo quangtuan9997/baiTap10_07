@@ -1,12 +1,18 @@
 package baitap10_7.service;
 
 import baitap10_7.model.Student;
+import org.springframework.context.annotation.Primary;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Component
+@Primary
+@Order(1)
 public class StudentServiceIMPL {
  List<Student> listStudent=new ArrayList<>();
     public List<Student> findAll(){
